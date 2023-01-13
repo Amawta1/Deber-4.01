@@ -6,6 +6,7 @@
 package vista;
 
 import controlador.PaisControl;
+import javax.swing.JInternalFrame;
 
 /**
  *
@@ -18,6 +19,11 @@ public class VentanaPaisListar extends javax.swing.JPanel {
     /** Creates new form VentanaPaisListar */
     public VentanaPaisListar() {
         initComponents();
+        this.paisControl = new PaisControl();
+        this.setClosable(true);
+        this.setIconifiable(true);
+        this.setResizable(true);
+        this.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
     }
     
     public void actualizarTabla() {

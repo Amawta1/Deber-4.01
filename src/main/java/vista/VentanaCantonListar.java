@@ -5,6 +5,7 @@
 package vista;
 
 import controlador.CantonControl;
+import javax.swing.JInternalFrame;
 
 /**
  *
@@ -19,6 +20,11 @@ public class VentanaCantonListar extends javax.swing.JInternalFrame {
      */
     public VentanaCantonListar() {
         initComponents();
+        this.cantonControl = new CantonControl();
+        this.setClosable(true);
+        this.setIconifiable(true);
+        this.setResizable(true);
+        this.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
     }
     
     public void actualizarTabla (){

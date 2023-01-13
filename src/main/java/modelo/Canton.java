@@ -87,25 +87,5 @@ public Canton(String nombre, double expancionTerritorial, double nroHabitantes, 
                 + ", nroHabitantes=" + nroHabitantes + ", provincia=" + provincia 
                 + ", codigo=" + codigo + '}';
     }
-    public int yearCanton() {
-        var years = LocalDate.now().getYear() - this.yearFundacion.getYear();
-        if (this.yearFundacion.getMonthValue() < LocalDate.now().getMonthValue()) {
-            years -= 1;
-        }
-        if (this.yearFundacion.getMonthValue() == LocalDate.now().getMonthValue()) {
-            if (this.yearFundacion.getDayOfMonth() < LocalDate.now().getDayOfMonth()) {
-                years -= 1;
-            }
 
-        }
-        return years;
-    }
-
-    public int getCodigoCanton() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public Object getNombreCanton() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }

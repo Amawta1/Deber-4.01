@@ -34,7 +34,7 @@ public class PaisServiceImpl implements PaisService {
     public Pais buscarPorCodigo(int codigo) {
         Pais retorno = null;
         for (var pais : this.paisList) {
-            if (codigo == pais.getCodigoPais()) {
+            if (codigo == pais.getCodigo()) {
                 retorno = pais;
                 break;
             }
@@ -47,7 +47,7 @@ public class PaisServiceImpl implements PaisService {
         Pais retorno = null;
 
         for (var pais : this.paisList) {
-            if (nombre.equals(pais.getNombrePais())) {
+            if (nombre.equals(pais.getNombre())) {
                 retorno = pais;
                 break;
             }
@@ -61,7 +61,7 @@ public class PaisServiceImpl implements PaisService {
         var indice = -1;
         for (var paises : this.paisList) {
             indice++;
-            if (codigo == paises.getCodigoPais()) {
+            if (codigo == paises.getCodigo()) {
                 this.paisList.set(indice, pais);
             }
         }
@@ -72,7 +72,7 @@ public class PaisServiceImpl implements PaisService {
         var indice = -1;
         for (var paises : this.paisList) {
             indice++;
-            if (codigo == paises.getCodigoPais()) {
+            if (codigo == paises.getCodigo()) {
                 this.paisList.remove(indice);
 
             }

@@ -29,7 +29,7 @@ public class CantonServiceImpl implements CantonService {
     public Canton buscarPorCodigo(int codigo) {
         Canton retorno = null;
         for (var canton : this.cantonList) {
-            if (codigo == canton.getCodigoCanton()) {
+            if (codigo == canton.getCodigo()) {
                 retorno = canton;
                 break;
             }
@@ -47,7 +47,7 @@ public class CantonServiceImpl implements CantonService {
         Canton retorno = null;
 
         for (var canton : this.cantonList) {
-            if (nombre.equals(canton.getNombreCanton())) {
+            if (nombre.equals(canton.getNombre())) {
                 retorno = canton;
                 break;
             }
@@ -61,7 +61,7 @@ public class CantonServiceImpl implements CantonService {
         var indice = -1;
         for (var cantones : this.cantonList) {
             indice++;
-            if (codigo == cantones.getCodigoCanton()) {
+            if (codigo == cantones.getCodigo()) {
                 this.cantonList.set(indice, canton);
             }
         }
@@ -72,7 +72,7 @@ public class CantonServiceImpl implements CantonService {
         var indice = -1;
         for (var cantones : this.cantonList) {
             indice++;
-            if (codigo == cantones.getCodigoCanton()) {
+            if (codigo == cantones.getCodigo()) {
                 this.cantonList.remove(indice);
 
             }

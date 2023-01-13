@@ -4,8 +4,11 @@
  */
 package vista;
 
+import controlador.CantonControl;
 import controlador.PaisControl;
+import controlador.ProvinciaControl;
 import java.awt.Component;
+import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -14,7 +17,9 @@ import javax.swing.JOptionPane;
  */
 public class VentanaPaisEliminar extends javax.swing.JPanel {
     
-    private PaisControl paisControl = new PaisControl();
+    private PaisControl paisControl;
+    private CantonControl cantonControl = new CantonControl();
+    private ProvinciaControl provinciaControl = new ProvinciaControl();
     private Component rootPane;
 
     /**
@@ -22,6 +27,7 @@ public class VentanaPaisEliminar extends javax.swing.JPanel {
      */
     public VentanaPaisEliminar() {
         initComponents();
+        this.paisControl = new PaisControl();
     }
     
     public void actualizarTabla() {

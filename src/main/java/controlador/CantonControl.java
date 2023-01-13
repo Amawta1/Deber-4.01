@@ -36,29 +36,10 @@ public class CantonControl {
         var provincia = data[7];
         var codigo = Integer.valueOf(data[8]).intValue();
 
-        if (year > LocalDate.now().getYear()) {
-            retorno += " El año no es valido ";
-        } else {
-            if (mes < 1 || mes > 12) {
-                retorno += " El mes no es valido ";
-            } else {
-                if (dia < 0 || dia > 31) {
-                    retorno += " El dia no es valido ";
-                } else {
-                    if (nroHabitantes < 0) {
-                        retorno += " El numero de Habitantes no son validos ";
-                    } else {
-                        if (expancionTerritorial <= 0 || expancionTerritorial > 300000000) {
-                            retorno += " No existe la expancion territorial";
-                        }
-                        var canton = new Canton(nombre, expancionTerritorial, LocalDate.of(year, mes, dia), nroHabitantes, pais, provincia, codigo);
-                        this.cantonServiceImpl.crear(canton);
-                        retorno = "Canton creado exitosamente";
-                    }
-                }
-            }
+        var canton = new Canton(nombre, expancionTerritorial, LocalDate.of(year, mes, dia), nroHabitantes, pais, provincia, codigo);
+        this.cantonServiceImpl.crear(canton);
+        retorno = "Canton creado exitosamente";
 
-        }
         return retorno;
     }
 
@@ -76,29 +57,9 @@ public class CantonControl {
         var codigo = Integer.valueOf(data[8]).intValue();
         var modificar = Integer.valueOf(data[9]).intValue();
 
-        if (year > LocalDate.now().getYear()) {
-            retorno += " El año no es valido ";
-        } else {
-            if (mes < 1 || mes > 12) {
-                retorno += " El mes no es valido ";
-            } else {
-                if (dia < 0 || dia > 31) {
-                    retorno += " El dia no es valido ";
-                } else {
-                    if (nroHabitantes < 0) {
-                        retorno += " El numero de Habitantes no son validos ";
-                    } else {
-                        if (expancionTerritorial <= 0 || expancionTerritorial > 300000000) {
-                            retorno += " No existe la expancion territorial";
-                        }
-                        var canton = new Canton(nombre, expancionTerritorial, LocalDate.of(year, mes, dia), nroHabitantes, pais, provincia, codigo);
-                        this.cantonServiceImpl.modificar(canton, modificar);
-                        retorno = "Canton modificado exitosamente";
-                    }
-                }
-            }
-
-        }
+        var canton = new Canton(nombre, expancionTerritorial, LocalDate.of(year, mes, dia), nroHabitantes, pais, provincia, codigo);
+        this.cantonServiceImpl.modificar(canton, modificar);
+        retorno = "Canton modificado exitosamente";
         return retorno;
     }
 

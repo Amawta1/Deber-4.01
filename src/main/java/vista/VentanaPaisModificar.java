@@ -5,8 +5,11 @@
 
 package vista;
 
+import controlador.CantonControl;
 import controlador.PaisControl;
+import controlador.ProvinciaControl;
 import java.awt.Component;
+import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,12 +18,22 @@ import javax.swing.JOptionPane;
  */
 public class VentanaPaisModificar extends javax.swing.JPanel {
     
-    private PaisControl paisControl = new PaisControl();
+    private PaisControl paisControl;
+    private CantonControl cantonControl = new CantonControl();
+    private ProvinciaControl provinciaControl = new ProvinciaControl();
     private Component rootPane;
 
     /** Creates new form VentanaPaisModificar */
     public VentanaPaisModificar() {
         initComponents();
+        this.paisControl = new PaisControl();
+        this.actualizarCombos();
+    }
+    private void actualizarCombos(){
+        var data = new String [this.paisControl.listar().size()];
+        for(var i=0;i<this.paisControl.listar().size();i++){
+            data[i]=this.paisControl.listar().get(i).toString();
+        }
     }
     
     public void actualizarTabla() {

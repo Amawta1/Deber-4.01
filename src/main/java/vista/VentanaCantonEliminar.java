@@ -5,6 +5,7 @@
 package vista;
 
 import controlador.CantonControl;
+import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,6 +21,11 @@ public class VentanaCantonEliminar extends javax.swing.JInternalFrame{
      */
     public VentanaCantonEliminar() {
         initComponents();
+        this.cantonControl = new CantonControl();
+        this.setClosable(true);
+        this.setIconifiable(true);
+        this.setResizable(true);
+        this.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
     }
     
     public void actualizarTabla (){

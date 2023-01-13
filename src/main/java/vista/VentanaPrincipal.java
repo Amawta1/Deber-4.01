@@ -229,16 +229,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu3ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        System.out.println("Hola Mundo");
         this.ventanaPais = new VentanaPaisCrear();
-
-        ventanaPais.setVisible(true);
-
-        ventanaPais.setResizable(true);
-        ventanaPais.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
         ventanaPais.setClosable(true);
-        ventanaPais.setIconifiable(true);
+        ventanaPais.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        ventanaPais.setVisible(true);
+        this.jDesktopPane1.add(ventanaPais);
 
-        this.jDesktopPane1.add(this.ventanaPais);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
@@ -444,4 +441,5 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     // End of variables declaration//GEN-END:variables
+
 }

@@ -38,7 +38,7 @@ public class ProvinciaServiceImpl implements ProvinciaService {
     var indice = -1;
         for (var provincias : this.provinciaList) {
             indice++;
-            if (codigo == provincias.getCodigoProvincia()) {
+            if (codigo == provincias.getCodigo()) {
                 this.provinciaList.set(indice, provincia);
             }
         } }
@@ -48,7 +48,7 @@ public class ProvinciaServiceImpl implements ProvinciaService {
         var indice = -1;
         for (var provincias : this.provinciaList) {
             indice++;
-            if (codigo == provincias.getCodigoProvincia()) {
+            if (codigo == provincias.getCodigo()) {
                 this.provinciaList.remove(indice);
 
             }

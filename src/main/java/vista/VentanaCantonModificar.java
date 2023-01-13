@@ -6,6 +6,7 @@ package vista;
 
 import controlador.CantonControl;
 import java.awt.Component;
+import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -23,6 +24,11 @@ public class VentanaCantonModificar extends javax.swing.JPanel {
      */
     public VentanaCantonModificar() {
         initComponents();
+        this.cantonControl = new CantonControl();
+        this.setClosable(true);
+        this.setIconifiable(true);
+        this.setResizable(true);
+        this.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
     }
     
     public void actualizarTabla (){

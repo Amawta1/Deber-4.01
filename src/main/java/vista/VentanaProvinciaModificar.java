@@ -5,6 +5,7 @@
 package vista;
 
 import controlador.ProvinciaControl;
+import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,6 +21,11 @@ public class VentanaProvinciaModificar extends javax.swing.JInternalFrame {
      */
     public VentanaProvinciaModificar() {
         initComponents();
+        this.provinciaControl = new ProvinciaControl();
+        this.setClosable(true);
+        this.setIconifiable(true);
+        this.setResizable(true);
+        this.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
     }
     
     public void actualizarTabla() {

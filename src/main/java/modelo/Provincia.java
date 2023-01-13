@@ -70,13 +70,9 @@ public class Provincia {
 
     @Override
     public String toString() {
-        return "Provincia{" + "nombre=" + nombre + ", expancionTerritorial=" + 
-                expancionTerritorial + ", pais=" + pais + ", nroHabitantes=" + 
-                nroHabitantes + ", codigo=" + codigo + '}';
-    }
-
-    public int getCodigoProvincia() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return "Provincia{" + "nombre=" + nombre + ", expancionTerritorial=" 
+                + expancionTerritorial + ", pais=" + pais + ", nroHabitantes=" 
+                + nroHabitantes + ", codigo=" + codigo + '}';
     }
 
 }

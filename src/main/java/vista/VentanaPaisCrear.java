@@ -5,6 +5,7 @@
 package vista;
 
 import controlador.PaisControl;
+import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
 
 
@@ -21,7 +22,18 @@ public class VentanaPaisCrear extends javax.swing.JInternalFrame {
      */
     public VentanaPaisCrear() {
         initComponents();
+        this.setClosable(true);
+        this.setIconifiable(true);
+        this.setResizable(true);
+        this.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
     }
+    
+     private void actualizarCombos(){
+        var data = new String [this.paisControl.listar().size()];
+        for(var i=0;i<this.paisControl.listar().size();i++){
+            data[i]=this.paisControl.listar().get(i).toString();
+        }
+     }
     
     public void actualizarTabla() {
         
