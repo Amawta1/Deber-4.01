@@ -32,6 +32,19 @@ public class ProvinciaServiceImpl implements ProvinciaService {
     public List<Provincia> listar() {
         return this.provinciaList;
     }
+    
+    @Override
+    public Provincia ProvinciaCodigo(int codigo) {
+        Provincia retorno = null;
+        for (var provincia : this.provinciaList) {
+            if (codigo == provincia.getCodigo()) {
+                retorno = provincia;
+                break;
+
+            }
+        }
+        return retorno;
+    }
 
     @Override
     public void modificar(Provincia provincia, int codigo) {

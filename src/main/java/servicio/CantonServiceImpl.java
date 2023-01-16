@@ -25,36 +25,12 @@ public class CantonServiceImpl implements CantonService {
         this.cantonList.add(canton);
     }
 
-    @Override
-    public Canton buscarPorCodigo(int codigo) {
-        Canton retorno = null;
-        for (var canton : this.cantonList) {
-            if (codigo == canton.getCodigo()) {
-                retorno = canton;
-                break;
-            }
-        }
-        return retorno;
-    }
 
     @Override
     public List<Canton> listar() {
         return this.cantonList;
     }
 
-    @Override
-    public Canton buscarPorNombre(String nombre) {
-        Canton retorno = null;
-
-        for (var canton : this.cantonList) {
-            if (nombre.equals(canton.getNombre())) {
-                retorno = canton;
-                break;
-            }
-        }
-
-        return retorno;
-    }
 
     @Override
     public void modificar(Canton canton, int codigo) {

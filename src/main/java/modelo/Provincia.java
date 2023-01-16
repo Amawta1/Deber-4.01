@@ -11,12 +11,12 @@ package modelo;
 public class Provincia {
 
     private String nombre;
-    private double expancionTerritorial;
+    private int expancionTerritorial;
     private Pais pais;
-    private double nroHabitantes;
+    private int nroHabitantes;
     private int codigo;
 
-    public Provincia(String nombre, double expancionTerritorial, Pais pais, double nroHabitantes, int codigo) {
+    public Provincia(String nombre, int expancionTerritorial, Pais pais, int nroHabitantes, int codigo) {
         this.nombre = nombre;
         this.expancionTerritorial = expancionTerritorial;
         this.pais = pais;
@@ -24,9 +24,6 @@ public class Provincia {
         this.codigo = codigo;
     }
 
-    public Provincia(String nombre, double expancionTerritorial, String pais, double nroHabitantes, int codigo) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
     public String getNombre() {
         return nombre;
@@ -36,11 +33,11 @@ public class Provincia {
         this.nombre = nombre;
     }
 
-    public double getExpancionTerritorial() {
+    public int getExpancionTerritorial() {
         return expancionTerritorial;
     }
 
-    public void setExpancionTerritorial(double expancionTerritorial) {
+    public void setExpancionTerritorial(int expancionTerritorial) {
         this.expancionTerritorial = expancionTerritorial;
     }
 
@@ -52,11 +49,11 @@ public class Provincia {
         this.pais = pais;
     }
 
-    public double getNroHabitantes() {
+    public int getNroHabitantes() {
         return nroHabitantes;
     }
 
-    public void setNroHabitantes(double nroHabitantes) {
+    public void setNroHabitantes(int nroHabitantes) {
         this.nroHabitantes = nroHabitantes;
     }
 

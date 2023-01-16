@@ -13,16 +13,14 @@ import modelo.Pais;
  */
 public interface PaisService {
     
-   public abstract void crear(Pais pais);
+   public Pais PaisCodigo(int codigo);
 
-    public Pais buscarPorCodigo(int codigo);
-
-    public Pais buscarPorNombre(String nombre);
+    public void crear(Pais pais);
 
     public void modificar(Pais pais, int codigo);
 
     public void eliminar(int codigo);
 
-    public abstract List<Pais> listar();
+    public List<Pais> listar();
     
 }

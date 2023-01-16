@@ -30,31 +30,6 @@ public class PaisServiceImpl implements PaisService {
         return this.paisList;
     }
 
-    @Override
-    public Pais buscarPorCodigo(int codigo) {
-        Pais retorno = null;
-        for (var pais : this.paisList) {
-            if (codigo == pais.getCodigo()) {
-                retorno = pais;
-                break;
-            }
-        }
-        return retorno;
-    }
-
-    @Override
-    public Pais buscarPorNombre(String nombre) {
-        Pais retorno = null;
-
-        for (var pais : this.paisList) {
-            if (nombre.equals(pais.getNombre())) {
-                retorno = pais;
-                break;
-            }
-        }
-
-        return retorno;
-    }
 
     @Override
     public void modificar(Pais pais, int codigo) {
@@ -78,6 +53,19 @@ public class PaisServiceImpl implements PaisService {
             }
 
         }
+    }
+
+    @Override
+    public Pais PaisCodigo(int codigo) {
+        Pais retorno = null;
+        for (var pais : this.paisList) {
+            if (codigo == pais.getCodigo()) {
+                retorno = pais;
+                break;
+
+            }
+        }
+        return retorno;
     }
 
 }

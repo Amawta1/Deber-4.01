@@ -14,28 +14,20 @@ public class Pais {
 
     private int nroProvincias;
     private String capital;
-    private LocalDate yearDescubrimiento;
+    private LocalDate descubrimiento;
     private String presidente;
     private String continente;
     private String nombre;
     private int codigo;
 
-    public Pais(int nroProvincias, String capital, String presidente, String continente, String nombre, int codigo) {
+    public Pais(int nroProvincias, String capital,LocalDate descubrimiento, String presidente, String continente, String nombre, int codigo) {
         this.nroProvincias = nroProvincias;
         this.capital = capital;
-        this.yearDescubrimiento = yearDescubrimiento;
+        this.descubrimiento = descubrimiento;
         this.presidente = presidente;
         this.continente = continente;
         this.nroProvincias = nroProvincias;
         this.codigo = codigo;
-    }
-
-    public Pais(int nroProvincia, int capital, LocalDate of, String presidente, String continente, String nombre, int codigo) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public Pais(int nroProvincia, String capital, LocalDate of, String presidente, String continente, String nombre, int codigo) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public int getNroProvincias() {
@@ -54,12 +46,12 @@ public class Pais {
         this.capital = capital;
     }
 
-    public LocalDate getYearDescubrimiento() {
-        return yearDescubrimiento;
+    public LocalDate getDescubrimiento() {
+        return descubrimiento;
     }
 
-    public void setYearDescubrimiento(LocalDate yearDescubrimiento) {
-        this.yearDescubrimiento = yearDescubrimiento;
+    public void setDescubrimiento(LocalDate descubrimiento) {
+        this.descubrimiento = descubrimiento;
     }
 
     public String getPresidente() {
@@ -96,10 +88,24 @@ public class Pais {
 
     @Override
     public String toString() {
-        return "Pais{" + "nroProvincias=" + nroProvincias + ", capital=" 
-                + capital + ", yearDescubrimiento=" + yearDescubrimiento 
-                + ", presidente=" + presidente + ", continente=" + continente 
-                + ", nombre=" + nombre + ", codigo=" + codigo + '}';
+        return "Pais{" + "nroProvincias=" + nroProvincias + ", capital="
+                + capital + ", yearDescubrimiento=" + descubrimiento + ", presidente="
+                + presidente + ", continente=" + continente + ", nombre=" + nombre + ", codigo=" + codigo + '}';
     }
 
+
+
+    public int descubrimiento() {
+        var years = LocalDate.now().getYear() - this.descubrimiento.getYear();
+        if (this.descubrimiento.getMonthValue() < LocalDate.now().getMonthValue()) {
+            years -= 1;
+        }
+        if (this.descubrimiento.getMonthValue() == LocalDate.now().getMonthValue()) {
+            if (this.descubrimiento.getDayOfMonth() < LocalDate.now().getDayOfMonth()) {
+                years -= 1;
+            }
+
+        }
+        return years;
+    }
 }

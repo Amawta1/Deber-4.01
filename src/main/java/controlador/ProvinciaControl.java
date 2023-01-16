@@ -20,10 +20,11 @@ public class ProvinciaControl {
 
     public String crear(String[] data) {
         var retorno = "No se pudo crear la Provincia";
+        
         var nombre = data[0];
-        var expancionTerritorial = Double.valueOf(data[1]).doubleValue();//double
-        var pais = data[2];
-        var nroHabitantes = Double.valueOf(data[3]).doubleValue();//double
+        var expancionTerritorial = Integer.valueOf(data[1]).intValue();
+        var pais = this.paisServiceImpl.PaisCodigo(Integer.valueOf(data[2]));
+        var nroHabitantes = Integer.valueOf(data[3]).intValue();
         var codigo = Integer.valueOf(data[4]).intValue();
 
         var provincia = new Provincia(nombre, expancionTerritorial, pais, nroHabitantes, codigo);
@@ -35,10 +36,11 @@ public class ProvinciaControl {
 
     public String modificar(String[] data) {
         var retorno = "No se pudo crear la Provincia";
+        
         var nombre = data[0];
-        var expancionTerritorial = Double.valueOf(data[1]).doubleValue();//double
-        var pais = data[2];
-        var nroHabitantes = Double.valueOf(data[3]).doubleValue();//double
+        var expancionTerritorial = Integer.valueOf(data[1]).intValue();
+        var pais = this.paisServiceImpl.PaisCodigo(Integer.valueOf(data[2]));
+        var nroHabitantes = Integer.valueOf(data[3]).intValue();
         var codigo = Integer.valueOf(data[4]).intValue();
         var provinciaModificado = Integer.valueOf(data[5]).intValue();
 
